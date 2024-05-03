@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.write("<br>");
+        var names = ["farhan", "anis", "rabaya", "babu"];
+        document.write(names);
+        document.write("<br>");
+
+        names.shift();//opsitie of pop from first
+        document.write(names);
+        document.write("<br>");
+
+
+        names.unshift("misba"); // opsitive of push ,in first
+        document.write(names);
+        document.write("<br>");
+
+        names.splice(2, 0, "cse", "rahin");// stating index, delt ele from last index , add elements
+        document.write(names);
+        document.write("<br>");
+
+        names.splice(1, 2);//removein index to index
+        document.write(names);
+        document.write("<br>");
+        var newarray = names.slice(2);
+        document.write(newarray);
+        document.write("<br>");
+
+        document.write(names.sort());
+        document.write("<br>");
+        names.reverse();
+        document.write(names);
+        document.write("<br>");
+
+        var num = [2, 1, 5, 3, 7, 4];
+        document.write(num);
+        num.sort(function (a, b) {
+            return a - b;
+        });
+        document.write("<br>");
+        document.write(num);
+        num.sort(function (a, b) {
+            return b - a;
+        });
+        document.write("<br>");
+        document.write(num);
+
+    </script>
+</body>
+
+</html>
