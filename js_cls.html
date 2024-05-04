@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+
+<body>
+    <script>
+        //constraction with cls object got
+        function student(name, id, age) {
+            this.name = name;
+            this.id = id;
+            this.age = age;
+
+
+            this.display = function () {
+                console.log(this.id);
+                document.write("name = " + this.name + "<br>");
+                document.write("id = " + this.id +"<br>");
+                document.write("age "  + this.age+ "<br>");
+            }
+
+        }
+
+        var stu1 = new student("farhan", 11, 25);
+        var stu2 = new student("shahriar", 2282, 24);
+        var stu3 = new student("misba", 2471, 47);
+        stu1.display();
+        stu2.display();
+        stu3.display();
+    
+    </script>
+</body>
+
+</html>

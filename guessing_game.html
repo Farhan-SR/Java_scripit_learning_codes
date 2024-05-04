@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guesing game</title>
+</head>
+
+<body>
+    <script>
+
+        var twon = 0;
+
+        for (var i = 1; i <= 5; i++) {
+            var num = parseInt(prompt("enter any number from 1 to 5 :"));
+            var randomNumber = Math.floor(Math.random() * 5) + 1;
+            
+            if (num == randomNumber) {
+                twon++;
+            }
+            else {
+               // document.write("you hvae lost ,number was :" + randomNumber);
+            }
+        }
+
+        document.write("you have won " + twon + " times");
+    </script>
+</body>
+
+</html>
