@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>on click</title>
+</head>
+
+<body>
+    <button id="btn1" onclick="my_massage1()">btn 1</button>
+    <button  id="btn1" onclick="my_massage2()">btn 2</button>
+    <p  id="peraid" onclick="my_massage2()"> Lorem, ipsum dolor.</p>
+    <script>
+    var pvar = document.querySelector("#peraid");
+        function my_massage1() {
+pvar.innerHTML =" you have click btn 1 ";
+        }
+        function my_massage2() {
+            pvar.innerHTML =" you have click btn 2 ";
+
+        }
+
+    </script>
+</body>
+
+</html>
