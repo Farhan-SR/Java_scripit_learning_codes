@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1 id="heading1">
+        i love bangladesh.
+    </h1>
+    <h1>farhan</h1>
+    <p class="pera"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, possimus!
+    </p>
+    <div class="div">
+        <a href="#">query</a>
+    </div>
+
+    <script>
+        //select element by id 
+        var hed1 = document.getElementById("heading1");
+        hed1.innerHTML = "this is farhan";
+
+        //select element by class
+       var peraa = document.getElementsByClassName("pera")[0];
+       peraa.innerHTML = "chenged text" ;
+       // select by tag
+       document.getElementsByTagName("p")[0].innerHTML = "change2" ;
+
+       //select element by query selector 
+       document.querySelector(".div a").innerHTML = "new text" ;
+
+       document.querySelectorAll("h1")[1].innerHTML = "Shahriar" ;
+         
+
+
+    </script>
+</body>
+
+</html>
