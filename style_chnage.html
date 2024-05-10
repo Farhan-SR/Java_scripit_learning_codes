@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="peraid">this is a peragraph.</p>
+    <button onclick="addstyle()">add style</button>
+    <button onclick="rev_style()"> remove style</button>
+
+
+
+    <style>
+        .pera_style {
+            color: red;
+            font-size: 3rem;
+            font-style: italic;
+        }
+    </style>
+
+
+    <script>
+        function addstyle() {
+            var myvar = document.querySelector(".peraid");
+            // myvar.style.color = "red";
+            // myvar.style.fontSize = "3rem";
+            // myvar.style.fontWeight = "bold";
+            myvar.classList.add("pera_style");
+        }
+        function rev_style() {
+            var myvar = document.querySelector('.peraid') ;
+            myvar.classList.remove("pera_style");
+        }
+
+    </script>
+</body>
+
+</html>

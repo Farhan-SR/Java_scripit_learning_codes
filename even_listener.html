@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1id">Farhan Shahriar</h1>
+
+    <style>
+        .mystyle {
+            color: red;
+            font-size: 3rem;
+            font-style: italic;
+            text-align: center;
+        }
+    </style>
+
+<script>
+    var myvar = document.querySelector("#h1id") ;
+    myvar.addEventListener("mouseover",myfun);
+    function myfun(){
+        myvar.classList.add("mystyle");
+    }
+
+    myvar.addEventListener("mouseout",myfun2);
+    function myfun2(){
+        myvar.classList.remove("mystyle");
+    }
+</script>
+
+</body>
+
+</html>
