@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn a">a</button>
+    <button class="btn b">b</button>
+    <button class="btn c">c</button>
+
+
+    <style>
+        .btn {
+            width: 100px;
+            height: 30px;
+            color: black;
+            background-color: violet;
+            border: none;
+        }
+
+        .ani {
+            box-shadow: 0 15px 18px 0 tomato;
+            opacity: 0.5;
+        }
+    </style>
+
+    <script>
+        for (var i = 0; i < 3; i++) {
+            document.querySelectorAll(".btn")[i].addEventListener("click", function () {
+                var text = this.innerHTML;
+                console.log(text);
+                audioPlay(text);
+                anima(text);
+            });
+        }
+        function audioPlay(text) {
+            switch (text) {
+                case "a":
+                    var audio = new Audio("audios/a.mp3");
+                    audio.play();
+                    break;
+                case "b":
+                    var audio = new Audio("audios/b.mp3");
+                    audio.play();
+                    break;
+                case "c":
+                    var audio = new Audio("audios/c.mp3");
+                    audio.play();
+                    break;
+            }
+        }
+
+        function anima(text) {
+            var ani = document.querySelector("." + text);
+            ani.classList.add("ani");
+            setTimeout(function () {
+                ani.classList.remove("ani");
+            }, 1000);
+        }
+
+    </script>
+</body>
+
+</html>
