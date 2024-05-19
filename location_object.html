@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <hi>BOM</hi>
+   <div class="div">
+    <P></P>
+    <P></P>
+    <P></P>
+    <P></P>
+   </div>
+
+    <script>
+ console.clear();
+    let locationdiv = document.querySelector(".div");
+    
+    let p0 = locationdiv.children[0];
+    p0.textContent = location.href ;
+
+    let p1 = locationdiv.children[1];
+        p1.textContent = location.hostname ;
+
+        let p2 = locationdiv.children[2];
+        p2.textContent = location.protocol ;
+
+        let p3 = locationdiv.children[3];
+        p3.textContent = location.port ;
+
+
+
+    </script>
+</body>
+</html>
