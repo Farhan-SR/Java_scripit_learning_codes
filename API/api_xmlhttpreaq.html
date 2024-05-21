@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api</title>
+</head>
+
+<body>
+    <h1> API CALLING </h1>
+
+    <script>
+
+        const makerequest = (method, url, data) => {
+            const xhr = new XMLHttpRequest();
+            xhr.open(method, url);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.onload = () => {
+                let data = xhr.response;
+                console.log(JSON.parse(data));
+            }
+            xhr.onerror = () => {
+                console.log("error")
+            }
+            xhr.send(JSON.stringify(data));
+
+        }
+
+
+        const get_data = () => {
+            makerequest('GET', 'https://jsonplaceholder.typicode.com/posts');
+        }
+
+        get_data();
+
+        const sent_data = () => {
+            makerequest('POST', 'https://jsonplaceholder.typicode.com/posts', {
+                title: 'farhan',
+                body: 'bdasdar',
+                userId: 1
+            });
+        }
+
+        sent_data();
+        const update_data = () => {
+            makerequest('PUT', 'https://jsonplaceholder.typicode.com/posts/1', {
+                title: 'shahriar',
+                body: 'asdfr',
+                userId: 1
+            });
+        }
+        update_data();
+        const upSINGEdate_data = () => {
+            makerequest('PUT', 'https://jsonplaceholder.typicode.com/posts/1', {
+                title: 'ALIEN',
+                
+                
+            });
+        }
+        upSINGEdate_data();
+        const deletdata = () => {
+            makerequest('DELETE', 'https://jsonplaceholder.typicode.com/posts/1', {
+            });
+        }
+    deletdata();
+
+    </script>
+
+
+</body>
+
+</html>
