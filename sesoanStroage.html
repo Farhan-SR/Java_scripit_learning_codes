@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//diff local vs sessionstroage 
+// 10mb vss 5mb
+//parmanest vs tab(seson)
+sessionStorage.setItem("user", "farhan");
+
+console.log( sessionStorage.getItem("user"));
+
+
+///cookies 
+
+document.cookie= "username = farhan ; expries = Mon, 27  Feb 2027 20:27:00 GMT";
+
+console.log(document.cookie);
+    </script>
+</body>
+</html>

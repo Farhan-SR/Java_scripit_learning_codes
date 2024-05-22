@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCAL STROAGE</title>
+</head>
+<body>
+    <script>
+//local stroage as key values pair 
+//setitem (kye , value )
+localStorage.setItem("name", "farhan shahriar");
+localStorage.setItem("password","014511");
+
+//getitem (key)
+const username = localStorage.getItem("name");
+const pass = localStorage.getItem("password");
+console.log(username, pass);
+ 
+//update will be repalsed 
+
+// remove data 
+localStorage.removeItem("name");
+localStorage.removeItem("password");
+
+//array in localstronage 
+const country = ["bangladesh" , "napal", "australia"];
+localStorage.setItem("countries", JSON.stringify(country));
+
+//get data from array 
+
+const array = JSON.parse(localStorage.getItem("countries"));
+console.log(array);
+
+//to clear all data from local stroage 
+localStorage.clear();
+
+
+
+    </script>
+</body>
+</html>
